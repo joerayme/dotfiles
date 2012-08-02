@@ -15,6 +15,8 @@ if [ -f /opt/local/etc/bash_completion ]; then
 	. /opt/local/etc/bash_completion
 fi
 
+. ~/.bashrc
+
 ##
 # Your previous /Users/joeray/.bash_profile file was backed up as /Users/joeray/.bash_profile.macports-saved_2010-10-28_at_11:27:26
 ##

@@ -34,6 +34,9 @@ if &t_Co > 2 || has("gui_running")
    syntax on
 endif
 
+" nginx config syntax highlighting
+au BufRead,BufNewFile /etc/nginx/**/* set ft=nginx
+
 if &t_Co >= 256 || has("gui_running")
    colorscheme mustang
 endif
