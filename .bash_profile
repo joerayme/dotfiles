@@ -6,8 +6,6 @@ alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
 alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
 alias telmem='telnet localhost 11211'
 
-export PS1='\u@\h:\w$(__git_ps1 " [%s]")\$ '
-
 alias ls="ls -Gp"
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
