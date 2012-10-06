@@ -1,4 +1,5 @@
 startup_message off
+caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f*%t%{-}%+Lw%-0<"
 
 # terminfo and termcap for nice 256 color terminal
 # allow bold colors - necessary for some reason
