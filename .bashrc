@@ -11,7 +11,7 @@ fi
 
 if [ -d /opt/local/ ]
 then
-    export PATH=/opt/local/apache2/bin:/opt/local/lib/postgresql82/bin:$PATH
+    export PATH=/opt/local/bin:/opt/local/apache2/bin:/opt/local/lib/postgresql82/bin:$PATH
     export MANPATH=/opt/local/share/man:$MANPATH
 fi
 
