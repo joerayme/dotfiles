@@ -7,7 +7,9 @@ set binary
 au BufNewFile * set noeol
 
 " Ensure the colours are always reported as 256
-set t_Co=256
+if (&term =~ "-256color")
+    set t_Co=256
+endif
 
 " Show line and column information
 set ruler
