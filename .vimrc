@@ -26,7 +26,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " Use hard tabs in Python files
 autocmd FileType python set noexpandtab
 " Use 2 spaces in puppet files
-autocmd FileType puppet set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType puppet,xml set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Highlight lines over 100 characters in PHP files
 autocmd FileType php let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)
