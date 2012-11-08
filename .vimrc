@@ -66,3 +66,6 @@ let Grep_Xargs_Options = '-0'
 " XML lint
 nmap <Leader>l <Leader>cd:%w !xmllint --valid --noout -<CR>
 nmap <Leader>t :!phpunit -c tests/phpunit.xml --colors tests/
+
+" FuzzyFile maps
+map <C-o> :FufFile<CR>
