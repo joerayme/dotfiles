@@ -71,3 +71,9 @@ nmap <Leader>t :!phpunit -c tests/phpunit.xml --colors tests/
 map <C-o> :FufCoverageFile<CR>
 let g:fuf_keyOpen = '<C-k>'
 let g:fuf_keyOpenVsplit = '<CR>'
+
+"Quicker pane navigation (using Shift+arrow keys, courtesy of oholiab)
+nmap <silent> <S-Up> :wincmd k<CR>
+nmap <silent> <S-Down> :wincmd j<CR>
+nmap <silent> <S-Left> :wincmd h<CR>
+nmap <silent> <S-Right> :wincmd l<CR>
