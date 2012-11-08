@@ -68,4 +68,6 @@ nmap <Leader>l <Leader>cd:%w !xmllint --valid --noout -<CR>
 nmap <Leader>t :!phpunit -c tests/phpunit.xml --colors tests/
 
 " FuzzyFile maps
-map <C-o> :FufFile<CR>
+map <C-o> :FufCoverageFile<CR>
+let g:fuf_keyOpen = '<C-k>'
+let g:fuf_keyOpenVsplit = '<CR>'
