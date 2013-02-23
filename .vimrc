@@ -12,13 +12,18 @@ if (&term =~ "-256color")
 endif
 
 " Show line and column information
-set ruler
 set scrolloff=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
 filetype plugin on
 filetype indent on
+
+" Always show a status bar
+set laststatus=2
+
+" Set fany symbols for Powerline
+let g:Powerline_symbols = 'fancy'
 
 " Allow autocompletion in PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
