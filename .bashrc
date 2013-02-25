@@ -71,9 +71,17 @@ elif [ -f /opt/local/etc/bash_completion ]; then
 	. /opt/local/etc/bash_completion
 fi
 
+if [ -f /opt/local/share/git-core/git-prompt.sh ]; then
+    . /opt/local/share/git-core/git-prompt.sh
+fi
+
 if [ -d $HOME/.rbenv ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
+fi
+
+if [ -d $HOME/Documents/git/mainline/bin ]; then
+    export PATH="$PATH:$HOME/Documents/git/mainline/bin"
 fi
 
 function rmb {
