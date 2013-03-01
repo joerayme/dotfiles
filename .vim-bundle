@@ -1,0 +1,21 @@
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle - required
+Bundle 'gmarik/vundle'
+
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-haml'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'vim-scripts/L9'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'rodjek/vim-puppet'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/vim-powerline'
+
+filetype plugin indent on

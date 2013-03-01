@@ -1,4 +1,4 @@
-call pathogen#infect()
+source ~/.vim-bundle
 
 " Used in order to maintain the line ending style at the end of files
 set binary
@@ -18,6 +18,8 @@ set shiftwidth=4
 set expandtab
 filetype plugin on
 filetype indent on
+
+set nocompatible
 
 " Always show a status bar
 set laststatus=2
