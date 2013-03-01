@@ -125,3 +125,16 @@ function rmb {
         fi
     fi
 }
+
+function bundle {
+    if [ -f scripts/deploy/build.sh ]
+    then
+        ./scripts/deploy/build.sh
+    elif [ -f deploy/bundle.php ]
+    then
+        php deploy/bundle.php
+    elif [ -f build/bundle.sh ]
+    then
+        ./build/bundle.sh
+    fi
+}
