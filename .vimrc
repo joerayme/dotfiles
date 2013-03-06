@@ -63,6 +63,8 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 
+nmap <Leader>e :NERDTreeToggle<CR>
+
 " PHPDoc enabler
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>

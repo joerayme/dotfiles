@@ -17,5 +17,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'rodjek/vim-puppet'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
