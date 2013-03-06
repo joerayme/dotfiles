@@ -3,6 +3,7 @@
 # for examples
 export VISUAL=vim
 export LSCOLORS=GxFxCxDxBxegedabagacad
+export JIRA='jira.futurenet.com'
 
 if [ -d $HOME/local/node/bin ]
 then
@@ -137,4 +138,8 @@ function bundle {
     then
         ./build/bundle.sh
     fi
+}
+
+function jira {
+    open https://$JIRA/browse/$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 }
