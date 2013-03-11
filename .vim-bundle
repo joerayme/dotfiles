@@ -18,5 +18,6 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
