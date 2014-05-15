@@ -21,6 +21,8 @@ filetype indent on
 
 set nocompatible
 
+set nofoldenable
+
 " Always show a status bar
 set laststatus=2
 
@@ -30,8 +32,6 @@ let g:Powerline_symbols = 'fancy'
 " Allow autocompletion in PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-" Use hard tabs in Python files
-autocmd FileType python set noexpandtab
 " Use 2 spaces in puppet files
 autocmd FileType puppet,xml set shiftwidth=2 tabstop=2 softtabstop=2
 
