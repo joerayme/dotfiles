@@ -1,0 +1,13 @@
+[user]
+	name = Joe Ray
+	email = joe@joeray.me
+[color]
+	ui = true
+[alias]
+    st = status
+    co = checkout
+    wdiff = diff --color-words
+[core]
+	editor = vim
+[push]
+	default = simple
