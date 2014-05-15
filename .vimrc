@@ -18,8 +18,6 @@ set scrolloff=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
-filetype plugin on
-filetype indent on
 
 set nofoldenable
 
@@ -80,6 +78,15 @@ nmap <Leader>t :!phpunit -c tests/phpunit.xml --colors tests/
 map <C-i> :FufCoverageFile<CR>
 let g:fuf_keyOpen = '<C-k>'
 let g:fuf_keyOpenVsplit = '<CR>'
+
+" Set up xterm keys in screen terms
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
 
 "Quicker pane navigation (using Shift+arrow keys, courtesy of oholiab)
 nmap <silent> <S-Up> :wincmd k<CR>
