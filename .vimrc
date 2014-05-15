@@ -1,3 +1,5 @@
+set nocompatible
+
 source ~/.vim-bundle
 
 " Used in order to maintain the line ending style at the end of files
@@ -18,8 +20,6 @@ set shiftwidth=4
 set expandtab
 filetype plugin on
 filetype indent on
-
-set nocompatible
 
 set nofoldenable
 

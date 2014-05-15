@@ -1,27 +1,29 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
 
 " let Vundle manage Vundle - required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-haml'
-Bundle 'majutsushi/tagbar'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/L9'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'rodjek/vim-puppet'
-Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'groenewege/vim-less'
-Bundle 'reedes/vim-wordy'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'digitaltoad/vim-jade'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-haml'
+Plugin 'majutsushi/tagbar'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/L9'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rodjek/vim-puppet'
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'groenewege/vim-less'
+Plugin 'reedes/vim-wordy'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
+
+call vundle#end()
 
 filetype plugin indent on
