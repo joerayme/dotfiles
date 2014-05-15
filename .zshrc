@@ -10,6 +10,7 @@ ZSH_THEME="josno"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmux="tmux -u"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
