@@ -2,6 +2,9 @@ set nocompatible
 
 source ~/.vim-bundle
 
+" Set the <leader> key to ,
+let mapleader=","
+
 " Used in order to maintain the line ending style at the end of files
 set binary
 
