@@ -48,6 +48,9 @@ Plugin 'airblade/vim-gitgutter'
 " Writing tools
 Plugin 'reedes/vim-wordy'
 
+" Better completion for PHP files
+Plugin 'shawncplus/phpcomplete.vim'
+
 call vundle#end()
 
 filetype plugin indent on
