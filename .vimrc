@@ -13,11 +13,13 @@ if (&term =~ "-256color")
     set t_Co=256
 endif
 
-" Show line and column information
+" Default is 4 spaces to a tab
 set scrolloff=4
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Show line and column information
 filetype plugin on
 filetype indent on
 
@@ -26,13 +28,13 @@ set nofoldenable
 " Always show a status bar
 set laststatus=2
 
-" Set fany symbols for Powerline
+" Set fancy symbols for Powerline
 let g:Powerline_symbols = 'fancy'
 
 " Allow autocompletion in PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-" Use 2 spaces in puppet files
+" Use 2 spaces in puppet and xml files
 autocmd FileType puppet,xml set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Highlight lines over 100 characters in PHP files
@@ -86,3 +88,5 @@ nmap <silent> <S-Up> :wincmd k<CR>
 nmap <silent> <S-Down> :wincmd j<CR>
 nmap <silent> <S-Left> :wincmd h<CR>
 nmap <silent> <S-Right> :wincmd l<CR>
+
+nmap <F8> :TagbarToggle<CR>

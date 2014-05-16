@@ -6,23 +6,47 @@ call vundle#begin()
 " let Vundle manage Vundle - required
 Plugin 'gmarik/vundle'
 
+" Syntax plugins
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-haml'
-Plugin 'majutsushi/tagbar'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'vim-scripts/L9'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'rodjek/vim-puppet'
-Plugin 'scrooloose/syntastic'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'groenewege/vim-less'
-Plugin 'reedes/vim-wordy'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
+
+" Plugin to display a list of tags for the current file
+" Mapped to F8 in .vimrc
+Plugin 'majutsushi/tagbar'
+
+" Toggles comments in files using <c-_><c-_> (inline) or <c-_>b (block)
+" See https://github.com/tomtom/tcomment_vim#readme for more keys
+Plugin 'tomtom/tcomment_vim'
+
+" File finder with fuzzy matching
+" Mapped to <C-i> in .vimrc
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/L9'
+
+" Buffer explorer which shows at the top of the vim window
+Plugin 'fholgado/minibufexpl.vim'
+
+" Git plugin
+Plugin 'tpope/vim-fugitive'
+
+" Syntax checker for multiple languages
+Plugin 'scrooloose/syntastic'
+
+" The cool looking bar at the bottom (needs custom font)
+Plugin 'Lokaltog/vim-powerline'
+
+" Directory browser
+Plugin 'scrooloose/nerdtree'
+
+" Displays additions, modifications and deletions for the current file in the gutter
+Plugin 'airblade/vim-gitgutter'
+
+" Writing tools
+Plugin 'reedes/vim-wordy'
 
 call vundle#end()
 
