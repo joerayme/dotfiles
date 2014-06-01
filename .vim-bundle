@@ -49,6 +49,9 @@ Plugin 'shawncplus/phpcomplete.vim'
 
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'honza/vim-snippets'
 
 " Allows aligning by different characters
 Plugin 'godlygeek/tabular.git'
