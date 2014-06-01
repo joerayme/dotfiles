@@ -24,11 +24,7 @@ Plugin 'tomtom/tcomment_vim'
 
 " File finder with fuzzy matching
 " Mapped to <C-i> in .vimrc
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'vim-scripts/L9'
-
-" Buffer explorer which shows at the top of the vim window
-Plugin 'fholgado/minibufexpl.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Git plugin
 Plugin 'tpope/vim-fugitive'

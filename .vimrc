@@ -113,10 +113,36 @@ let Grep_Xargs_Options = '-0'
 " XML lint
 nmap <Leader>l <Leader>cd:%w !xmllint --valid --noout -<CR>
 
-" FuzzyFile maps
-map <C-i> :FufCoverageFile<CR>
-let g:fuf_keyOpen = '<C-k>'
-let g:fuf_keyOpenVsplit = '<CR>'
+" CtrlP {
+    " keymaps
+    let g:ctrlp_map = '<C-i>'
+
+    " Search for files from the current path as well as ancestors in version
+    " control
+    let g:ctrlp_working_path_mode = 'ra'
+
+    " exclude certain files
+    let g:ctrlp_custom_ignore = {
+        \ 'dir': '\.git$\|\.hg$\|\.svn$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+
+    " Set find and fallback commands
+    if executable('ag')
+        let s:ctrlp_fallback = 'ag %s --nocolor -l -g ""'
+    elseif executable('ack')
+        let s:ctrlp_fallback = 'ack %s --nocolor -f'
+    else
+        let s:ctrlp_fallback = 'find %s -type f'
+    endif
+
+    let g:ctrlp_user_command = {
+        \ 'types': {
+            \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+            \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+        \ },
+        \ 'fallback': s:ctrlp_fallback
+    \ }
+" }
 
 " tabularize {
     nmap <Leader>a= :Tabularize /=<CR>
