@@ -11,6 +11,9 @@ set binary
 " For new files, make sure there's no EOL at the end of the file
 au BufNewFile * set noeol
 
+" Syntax
+au BufNewFile,BufRead *.twig set filetype=html
+
 " Ensure the colours are always reported as 256
 if (&term =~ "-256color")
     set t_Co=256
