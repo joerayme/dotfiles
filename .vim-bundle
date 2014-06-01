@@ -8,7 +8,6 @@ Plugin 'gmarik/vundle'
 
 " Syntax plugins
 Plugin 'plasticboy/vim-markdown'
-Plugin 'tpope/vim-haml'
 Plugin 'rodjek/vim-puppet'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
@@ -45,7 +44,25 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'reedes/vim-wordy'
 
 " Better completion for PHP files
+Plugin 'spf13/PIV'
+Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'shawncplus/phpcomplete.vim'
+
+" Better python support
+Plugin 'klen/python-mode'
+Plugin 'python.vim'
+Plugin 'python_match.vim'
+Plugin 'pythoncomplete'
+
+" HTML
+Plugin 'amirh/HTML-AutoCloseTag'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'tpope/vim-haml'
+Plugin 'beyondwords/vim-twig'
+
+" Buffer line
+Plugin 'bling/vim-bufferline'
 
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
