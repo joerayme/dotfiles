@@ -115,6 +115,13 @@ map <C-i> :FufCoverageFile<CR>
 let g:fuf_keyOpen = '<C-k>'
 let g:fuf_keyOpenVsplit = '<CR>'
 
+" tabularize {
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a$ :Tabularize /\$<CR>
+    vmap <Leader>a$ :Tabularize /\$<CR>
+" }
+
 " Set up xterm keys in screen terms
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on

@@ -54,6 +54,9 @@ Plugin 'shawncplus/phpcomplete.vim'
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
 
+" Allows aligning by different characters
+Plugin 'godlygeek/tabular.git'
+
 call vundle#end()
 
 filetype plugin indent on
