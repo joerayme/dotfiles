@@ -51,6 +51,9 @@ Plugin 'reedes/vim-wordy'
 " Better completion for PHP files
 Plugin 'shawncplus/phpcomplete.vim'
 
+" Better omnicompletion
+Plugin 'Shougo/neocomplcache.vim'
+
 call vundle#end()
 
 filetype plugin indent on
