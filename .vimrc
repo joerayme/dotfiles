@@ -13,6 +13,7 @@ au BufNewFile * set noeol
 
 " Syntax
 au BufNewFile,BufRead *.twig set filetype=html
+au BufNewFile,BufRead Vagrantfile set filetype=ruby scrolloff=2 tabstop=2 shiftwidth=2 expandtab
 
 " Ensure the colours are always reported as 256
 if (&term =~ "-256color")
