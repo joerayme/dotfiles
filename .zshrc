@@ -47,7 +47,7 @@ elif [[ "$unamestr" == "Linux" ]]; then
 fi
 
 if [[ "$platform" == "osx" ]]; then
-    path=($(brew --prefix homebrew/php/php53)/bin /usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin)
+    path=(/usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin)
 else
     path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
 fi
