@@ -12,6 +12,11 @@ ZSH_THEME="josno"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux -u"
 
+dockercl() {
+    docker ps -aqf status=exited | xargs docker rm
+    docker images -q --filter dangling=true | xargs docker rmi
+}
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -52,7 +57,14 @@ else
     path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
 fi
 
+# Docker
+export DOCKER_CERT_PATH=/Users/jray/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+
 # pip should only run if there is a virtualenv currently activated
 #export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+#. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
