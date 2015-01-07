@@ -29,7 +29,7 @@ set expandtab
 set nofoldenable
 
 " Always show a status bar
-set laststatus=2
+set laststatus=0
 
 " Set fancy symbols for Powerline
 let g:Powerline_symbols = 'fancy'

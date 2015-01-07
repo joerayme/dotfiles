@@ -65,9 +65,6 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-haml'
 Plugin 'beyondwords/vim-twig'
 
-" Buffer line
-Plugin 'bling/vim-bufferline'
-
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'Shougo/neosnippet'
