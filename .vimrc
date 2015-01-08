@@ -13,15 +13,19 @@ au BufNewFile * set noeol
 
 " Syntax
 au BufNewFile,BufRead *.twig set filetype=html
-au BufNewFile,BufRead Vagrantfile set filetype=ruby scrolloff=2 tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+
+" Use 2 spaces in puppet, ruby and xml files
+autocmd FileType puppet,xml,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Ensure the colours are always reported as 256
 if (&term =~ "-256color")
     set t_Co=256
 endif
 
-" Default is 4 spaces to a tab
+" Lines above/below cursor
 set scrolloff=4
+" Default is 4 spaces to a tab
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -108,9 +112,6 @@ let g:Powerline_symbols = 'fancy'
     inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 " } neocomplcache
-
-" Use 2 spaces in puppet and xml files
-autocmd FileType puppet,xml set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Highlight lines over 100 characters in PHP files
 autocmd FileType php let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)
