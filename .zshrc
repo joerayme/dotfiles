@@ -13,7 +13,18 @@ ZSH_THEME="josno"
 alias tmux="tmux -u"
 
 dockercl() {
-    docker ps -aqf status=exited | xargs docker rm
+    IMAGES=$(docker ps -aqf status=exited)
+    if [[ ! -z $IMAGES ]]; then
+        docker ps --all --filter=status=exited
+        for i in $IMAGES
+        do
+            read -q "REPLY?Do you want to delete $i? [yN] "
+            echo
+            [[ $REPLY == "y" || $REPLY == "Y" ]] && docker rm $i
+        done
+    else
+        echo "No stopped images to clean up"
+    fi
     docker images -q --filter dangling=true | xargs docker rmi
 }
 
@@ -58,9 +69,7 @@ else
 fi
 
 # Docker
-export DOCKER_CERT_PATH=/Users/jray/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
+which boot2docker >/dev/null 2>&1 && $(boot2docker shellinit 2> /dev/null)
 
 # pip should only run if there is a virtualenv currently activated
 #export PIP_REQUIRE_VIRTUALENV=true
