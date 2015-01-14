@@ -13,6 +13,8 @@ Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'derekwyatt/vim-scala'
 
 " Plugin to display a list of tags for the current file
 " Mapped to F8 in .vimrc
