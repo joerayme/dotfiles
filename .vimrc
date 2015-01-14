@@ -14,6 +14,7 @@ au BufNewFile * set noeol
 " Syntax
 au BufNewFile,BufRead *.twig set filetype=html
 au BufNewFile,BufRead Vagrantfile set filetype=ruby
+au BufNewFile,BufRead .vim-bundle set filetype=vim
 
 " Use 2 spaces in puppet, ruby and xml files
 autocmd FileType puppet,xml,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
