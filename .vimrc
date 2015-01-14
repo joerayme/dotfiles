@@ -142,18 +142,6 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 
-nmap <Leader>e :NERDTreeToggle<CR>
-
-" PHPDoc enabler
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR>
-
-let Grep_Xargs_Options = '-0'
-
-" XML lint
-nmap <Leader>l <Leader>cd:%w !xmllint --valid --noout -<CR>
-
 " CtrlP {
     " keymaps
     let g:ctrlp_map = '<C-i>'
@@ -206,5 +194,11 @@ nmap <silent> <S-Up> :wincmd k<CR>
 nmap <silent> <S-Down> :wincmd j<CR>
 nmap <silent> <S-Left> :wincmd h<CR>
 nmap <silent> <S-Right> :wincmd l<CR>
+
+" Toggle paste mode
+nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
+
+" Toggle NERDTree
+nmap <Leader>e :NERDTreeToggle<CR>
 
 nmap <F8> :TagbarToggle<CR>
