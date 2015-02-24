@@ -28,6 +28,10 @@ dockercl() {
     docker images -q --filter dangling=true | xargs docker rmi
 }
 
+docker-usage() {
+    boot2docker ssh "sudo du -hs /var/lib/docker/aufs/"
+}
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
