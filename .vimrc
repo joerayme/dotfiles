@@ -1,5 +1,8 @@
 set nocompatible
 
+set encoding=utf8
+set termencoding=utf8
+
 source ~/.vim-bundle
 
 " Set the <leader> key to ,
@@ -36,8 +39,8 @@ set nofoldenable
 " Always show a status bar
 set laststatus=2
 
-" Set fancy symbols for Powerline
-let g:Powerline_symbols = 'fancy'
+" Set fancy symbols for airline
+let g:airline_powerline_fonts = 1
 
 " neocomplcache settings {
     let g:acp_enableAtStartup = 0

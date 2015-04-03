@@ -34,8 +34,8 @@ Plugin 'tpope/vim-fugitive'
 " Syntax checker for multiple languages
 Plugin 'scrooloose/syntastic'
 
-" The cool looking bar at the bottom (needs custom font)
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Status bar (needs patched font)
+Plugin 'bling/vim-airline'
 
 " Golang
 Plugin 'fatih/vim-go'
