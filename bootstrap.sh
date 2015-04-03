@@ -27,6 +27,8 @@ CASK_PACKAGES=(
     google-chrome
     google-drive
     iterm2
+    lastfm
+    lastpass
     rowanj-gitx
     spectacle
     spotify
