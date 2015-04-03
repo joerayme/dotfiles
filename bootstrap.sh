@@ -27,6 +27,7 @@ CASK_PACKAGES=(
     google-chrome
     google-drive
     iterm2
+    rowanj-gitx
     spectacle
     spotify
     vagrant
@@ -51,7 +52,6 @@ brew install ${BREW_PACKAGES[@]}
 echo "Installing cask packages..."
 brew install caskroom/cask/brew-cask
 brew cask install ${CASK_PACKAGES[@]}
-brew cask alfred link
 
 brew cleanup && brew cask cleanup
 
