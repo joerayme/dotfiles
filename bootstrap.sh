@@ -29,6 +29,7 @@ CASK_PACKAGES=(
     iterm2
     lastfm
     lastpass
+    libreoffice
     rowanj-gitx
     spectacle
     spotify
