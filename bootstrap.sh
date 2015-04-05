@@ -6,6 +6,7 @@ TMP_DIR=$(mktemp -t install)
 
 BREW_PACKAGES=(
     boot2docker
+    ctags
     git
     jq
     npm
@@ -27,6 +28,7 @@ CASK_PACKAGES=(
     google-chrome
     google-drive
     iterm2
+    java
     lastfm
     lastpass
     libreoffice
