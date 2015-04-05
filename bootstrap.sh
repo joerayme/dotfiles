@@ -30,6 +30,7 @@ CASK_PACKAGES=(
     lastfm
     lastpass
     libreoffice
+    moneydance
     rowanj-gitx
     spectacle
     spotify
