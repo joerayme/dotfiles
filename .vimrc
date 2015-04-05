@@ -41,6 +41,8 @@ set laststatus=2
 
 " Set fancy symbols for airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
 
 " neocomplcache settings {
     let g:acp_enableAtStartup = 0
@@ -199,7 +201,7 @@ nmap <silent> <S-Left> :wincmd h<CR>
 nmap <silent> <S-Right> :wincmd l<CR>
 
 " Toggle paste mode
-nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
+nmap <silent> <Leader>p :set invpaste<CR>:set paste?<CR>
 
 " Toggle NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
