@@ -43,6 +43,7 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline_theme = 'powerlineish'
 
 " neocomplcache settings {
     let g:acp_enableAtStartup = 0
@@ -130,6 +131,7 @@ endif
 " nginx config syntax highlighting
 au BufRead,BufNewFile /etc/nginx/**/* set ft=nginx
 
+set background=dark
 if &t_Co >= 256 || has("gui_running")
    colorscheme mustang
 endif
