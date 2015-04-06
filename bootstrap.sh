@@ -94,7 +94,7 @@ do
     fi
 done
 
-vim +BundleInstall +qa
+vim +PluginClean +PluginInstall +qa
 
 echo "Installing pips..."
 pip install ${PIP_PACKAGES[@]}
