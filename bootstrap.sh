@@ -41,7 +41,9 @@ CASK_PACKAGES=(
 )
 PIP_PACKAGES=(
     beets
-    powerline-status
+)
+GEM_PACKAGES=(
+    jekyll
 )
 
 if [[ ! $(which brew) ]]
@@ -96,6 +98,9 @@ vim +BundleInstall +qa
 
 echo "Installing pips..."
 pip install ${PIP_PACKAGES[@]}
+
+echo "Installing gems..."
+sudo gem install ${GEM_PACKAGES[@]}
 
 # Set fast key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
