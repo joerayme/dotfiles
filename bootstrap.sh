@@ -41,6 +41,7 @@ CASK_PACKAGES=(
 )
 PIP_PACKAGES=(
     beets
+    fabric
 )
 GEM_PACKAGES=(
     jekyll
