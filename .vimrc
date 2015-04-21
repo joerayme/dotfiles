@@ -139,7 +139,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " nginx config syntax highlighting
-au BufRead,BufNewFile /etc/nginx/**/* set ft=nginx
+au BufRead,BufNewFile **/etc/nginx/**/* set ft=nginx
 
 set background=dark
 if &t_Co >= 256 || has("gui_running")
