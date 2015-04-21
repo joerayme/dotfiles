@@ -212,6 +212,12 @@ nmap <silent> <S-Down> :wincmd j<CR>
 nmap <silent> <S-Left> :wincmd h<CR>
 nmap <silent> <S-Right> :wincmd l<CR>
 
+" Quick resizing
+nnoremap <silent> <Leader>+ :resize +5<CR>
+nnoremap <silent> <Leader>- :resize -5<CR>
+nnoremap <silent> <Leader>] :vertical resize +5<CR>
+nnoremap <silent> <Leader>[ :vertical resize -5<CR>
+
 " Toggle paste mode
 nmap <silent> <Leader>p :set invpaste<CR>:set paste?<CR>
 
