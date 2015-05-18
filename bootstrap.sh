@@ -38,6 +38,8 @@ CASK_PACKAGES=(
     spotify
     vagrant
     virtualbox
+    font-source-sans-pro
+    font-open-sans
 )
 PIP_PACKAGES=(
     beets
@@ -60,6 +62,7 @@ brew install ${BREW_PACKAGES[@]}
 
 echo "Installing cask packages..."
 brew install caskroom/cask/brew-cask
+brew cask tap caskroom/fonts
 brew cask install ${CASK_PACKAGES[@]}
 
 brew cleanup && brew cask cleanup
