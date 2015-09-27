@@ -8,7 +8,10 @@
     co = checkout
     wdiff = diff --color-words
     rh = reset HEAD
+    pr = pull --rebase
 [core]
 	editor = vim
 [push]
 	default = simple
+[diff]
+	submodule = log
