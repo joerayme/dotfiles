@@ -73,7 +73,7 @@ else
 fi
 
 # Docker
-which boot2docker >/dev/null 2>&1 && $(boot2docker shellinit 2> /dev/null)
+which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | grep -v "^#" | sed 's/"//g')
 
 # pip should only run if there is a virtualenv currently activated
 #export PIP_REQUIRE_VIRTUALENV=true
