@@ -50,13 +50,6 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx vagrant command-not-found battery brew composer fabric)
-
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 unamestr=`uname`
 platform='unknown'
@@ -71,6 +64,13 @@ if [[ "$platform" == "osx" ]]; then
 else
     path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
 fi
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git osx vagrant command-not-found battery brew composer fabric rbenv)
+
+source $ZSH/oh-my-zsh.sh
 
 # Docker
 which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | grep -v "^#" | sed 's/"//g')
