@@ -224,5 +224,6 @@ nmap <silent> <Leader>p :set invpaste<CR>:set paste?<CR>
 
 " Toggle NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeFind<CR>
 
 nmap <F8> :TagbarToggle<CR>
