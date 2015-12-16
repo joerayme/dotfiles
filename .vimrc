@@ -219,8 +219,14 @@ nnoremap <silent> <Leader>- :resize -5<CR>
 nnoremap <silent> <Leader>] :vertical resize +5<CR>
 nnoremap <silent> <Leader>[ :vertical resize -5<CR>
 
+" Toggle GitGutter
+nmap <silent> <Leader>g :GitGutterToggle<CR>
+
 " Toggle paste mode
 nmap <silent> <Leader>p :set invpaste<CR>:set paste?<CR>
+
+" Toggle line numbers
+nmap <silent> <Leader>n :set invnumber<CR>
 
 " Toggle NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
