@@ -7,6 +7,7 @@ TMP_DIR=$(mktemp -t install)
 BREW_PACKAGES=(
     boot2docker
     ctags
+    diff-so-fancy
     git
     jq
     npm
