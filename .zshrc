@@ -80,4 +80,9 @@ which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | 
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+if [[ -d ~/gocode/bin ]]; then
+    export GOPATH=~/gocode/
+    path+=(~/gocode/bin/)
+fi
+
 #. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
