@@ -19,9 +19,10 @@ au BufNewFile,BufRead *.twig set filetype=html
 au BufNewFile,BufRead Vagrantfile set filetype=ruby
 au BufNewFile,BufRead .vim-bundle set filetype=vim
 au BufNewFile,BufRead riemann.config set filetype=clojure
+au BufNewFile,BufRead **/etc/nginx/**/* set ft=nginx
 
-" Use 2 spaces in puppet, ruby and xml files
-autocmd FileType puppet,xml,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+" Use 2 spaces in puppet and ruby files
+autocmd FileType puppet,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Ensure the colours are always reported as 256
 if (&term =~ "-256color")
@@ -81,7 +82,7 @@ let g:airline_theme = 'powerlineish'
 
     " Allow omnicompletion
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html,markdown,mkd setlocal omnifunc=htmlcomplete#CompleteTags
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -138,9 +139,6 @@ if &t_Co > 2 || has("gui_running")
    " switch syntax highlighting on, when the terminal has colors
    syntax on
 endif
-
-" nginx config syntax highlighting
-au BufRead,BufNewFile **/etc/nginx/**/* set ft=nginx
 
 set background=dark
 if &t_Co >= 256 || has("gui_running")
@@ -231,5 +229,8 @@ nmap <silent> <Leader>n :set invnumber<CR>
 " Toggle NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeFind<CR>
+
+" Toggle line numbers
+nmap <Leader>n :set number!<CR>
 
 nmap <F8> :TagbarToggle<CR>
