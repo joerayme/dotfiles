@@ -70,7 +70,7 @@ brew cleanup && brew cask cleanup
 
 echo "Installing dotfiles..."
 [[ ! -d ~/.dotfiles ]] && git clone git@github.com:joerayme/dotfiles.git ~/.dotfiles >/dev/null 2>&1
-[[ ! -d ~/.oh-my-zsh ]] && git clone git@github.com:joerayme/oh-my-zsh.git ~/.oh-my-zsh >/dev/null 2>&1
+[[ ! -d ~/.oh-my-zsh ]] && git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh >/dev/null 2>&1
 
 DIR=$(pwd)
 cd ~/.dotfiles

@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+DOTFILES=$(cd "$(dirname $(readlink ${(%):-%N}))" && pwd)
+ZSH_CUSTOM=$DOTFILES/zsh_custom/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
