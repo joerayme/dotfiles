@@ -2,8 +2,6 @@
 
 set -eo pipefail
 
-TMP_DIR=$(mktemp -t install)
-
 BREW_PACKAGES=(
     boot2docker
     ctags
@@ -57,12 +55,12 @@ fi
 brew update
 
 echo "Installing brew packages..."
-brew install ${BREW_PACKAGES[@]}
+brew install "${BREW_PACKAGES[@]}"
 
 echo "Installing cask packages..."
 brew install caskroom/cask/brew-cask
 brew cask tap caskroom/fonts
-brew cask install ${CASK_PACKAGES[@]}
+brew cask install "${CASK_PACKAGES[@]}"
 
 brew cleanup && brew cask cleanup
 
@@ -73,25 +71,25 @@ echo "Installing dotfiles..."
 DIR=$(pwd)
 cd ~/.dotfiles
 git submodule init && git submodule update
-cd $DIR
+cd "$DIR"
 
 for f in ~/.dotfiles/.*
 do
-    bn=$(basename $f)
+    bn=$(basename "$f")
     target=~/$bn
     if [[ $bn -ne "." && $bn -ne ".." && $bn -ne ".git" && $bn -ne ".gitmodules" ]]
     then
         if [[ ! -L $target && -e $target ]]
         then
-            read -p "$target is a regular file, do you want to replace it? " yn
+            read -rp "$target is a regular file, do you want to replace it? " yn
             case $yn in
-                [Yy]* ) mv $target "${target}.bak" && ln -s $f $target;
+                [Yy]* ) mv "$target" "${target}.bak" && ln -s "$f" "$target";
             esac
         elif [[ ! -L $target ]]
         then
-            read -p "Do you want to link $bn? " yn
+            read -rp "Do you want to link $bn? " yn
             case $yn in
-                [Yy]* ) ln -s $f $target;
+                [Yy]* ) ln -s "$f" "$target";
             esac
         fi
     fi
@@ -100,7 +98,7 @@ done
 vim +PluginClean +PluginInstall +qa
 
 echo "Installing pips..."
-pip install ${PIP_PACKAGES[@]}
+pip install "${PIP_PACKAGES[@]}"
 
 # Set fast key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
