@@ -9,6 +9,7 @@ BREW_PACKAGES=(
     ctags
     diff-so-fancy
     git
+    hugo
     jq
     npm
     python
@@ -45,9 +46,6 @@ CASK_PACKAGES=(
 PIP_PACKAGES=(
     beets
     fabric
-)
-GEM_PACKAGES=(
-    jekyll
 )
 
 if [[ ! $(which brew) ]]
@@ -103,9 +101,6 @@ vim +PluginClean +PluginInstall +qa
 
 echo "Installing pips..."
 pip install ${PIP_PACKAGES[@]}
-
-echo "Installing gems..."
-sudo gem install ${GEM_PACKAGES[@]}
 
 # Set fast key repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
