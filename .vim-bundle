@@ -73,6 +73,9 @@ Plugin 'honza/vim-snippets'
 " Allows aligning by different characters
 Plugin 'godlygeek/tabular.git'
 
+" Expand selection with v, decrease selection with <C-v>
+Plugin 'terryma/vim-expand-region'
+
 call vundle#end()
 
 filetype plugin indent on

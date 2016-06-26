@@ -231,4 +231,8 @@ nmap <silent> <Leader>n :set invnumber<CR>
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeFind<CR>
 
+" Expand/contract selection from character to word etc.
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 nmap <F8> :TagbarToggle<CR>
