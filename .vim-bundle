@@ -51,11 +51,6 @@ Plugin 'airblade/vim-gitgutter'
 " Writing tools
 Plugin 'reedes/vim-wordy'
 
-" Better completion for PHP files
-Plugin 'spf13/PIV'
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'shawncplus/phpcomplete.vim'
-
 " Better python support
 Plugin 'klen/python-mode'
 Plugin 'python.vim'
