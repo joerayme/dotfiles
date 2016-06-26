@@ -62,10 +62,12 @@ elif [[ "$unamestr" == "Linux" ]]; then
     platform="linux"
 fi
 
+export GOPATH=~/Documents/code/go/
+
 if [[ "$platform" == "osx" ]]; then
-    path=(/usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin)
+    path=(/usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin $GOPATH/bin)
 else
-    path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
+    path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games $GOPATH/bin)
 fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
