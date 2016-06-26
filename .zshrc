@@ -13,6 +13,7 @@ ZSH_THEME="josno"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux -u"
+alias json="jq '.' --color-output | less -R"
 
 dockercl() {
     IMAGES=$(docker ps -aqf status=exited)
