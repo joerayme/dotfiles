@@ -62,12 +62,10 @@ elif [[ "$unamestr" == "Linux" ]]; then
     platform="linux"
 fi
 
-export GOPATH=~/Documents/code/go/
-
 if [[ "$platform" == "osx" ]]; then
-    path=(/usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin $GOPATH/bin)
+    path=(/usr/local/sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/share/npm/bin)
 else
-    path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games $GOPATH/bin)
+    path=(/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
 fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -84,5 +82,15 @@ which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | 
 #export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+if [[ -d ~/gocode/bin ]]; then
+    export GOPATH=~/gocode/
+elif [[ -d ~/Documents/code/go/ ]]; then
+    export GOPATH=~/Documents/code/go/
+fi
+
+if [[ -z $GOPATH ]]; then
+    path+=($GOPATH/bin/)
+fi
 
 #. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
