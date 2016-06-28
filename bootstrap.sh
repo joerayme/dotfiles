@@ -12,6 +12,7 @@ BREW_PACKAGES=(
     npm
     python
     python3
+    rsync
     ssh-copy-id
     terminal-notifier
     the_silver_searcher
