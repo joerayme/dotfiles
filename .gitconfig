@@ -1,6 +1,7 @@
 [user]
 	name = Joe Ray
 	email = joe@joeray.me
+	signingkey = 126790D6804EFECC
 [color]
 	ui = true
 [alias]
