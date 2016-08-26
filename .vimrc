@@ -11,6 +11,9 @@ let mapleader=","
 " Used in order to maintain the line ending style at the end of files
 set binary
 
+" Search incrementally and highlight
+set hlsearch incsearch
+
 " For new files, make sure there's no EOL at the end of the file
 au BufNewFile * set noeol
 
