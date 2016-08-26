@@ -8,7 +8,7 @@ Plugin 'gmarik/vundle'
 
 " Syntax plugins
 Plugin 'plasticboy/vim-markdown'
-Plugin 'rodjek/vim-puppet'
+Plugin 'evidex/vim-puppet'
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
@@ -52,10 +52,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'reedes/vim-wordy'
 
 " Better python support
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 Plugin 'python.vim'
 Plugin 'python_match.vim'
-Plugin 'pythoncomplete'
+"Plugin 'pythoncomplete'
 
 " HTML
 Plugin 'amirh/HTML-AutoCloseTag'
@@ -75,6 +75,9 @@ Plugin 'godlygeek/tabular.git'
 
 " Expand selection with v, decrease selection with <C-v>
 Plugin 'terryma/vim-expand-region'
+
+" Org mode for note-taking/todo lists
+Plugin 'jceb/vim-orgmode'
 
 call vundle#end()
 
