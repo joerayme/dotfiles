@@ -10,6 +10,7 @@
     wdiff = diff --color-words
     rh = reset HEAD
     pr = pull --rebase
+    l = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Cblue%G? %Creset%s'
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
