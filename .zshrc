@@ -71,12 +71,12 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx vagrant command-not-found battery brew composer fabric rbenv aws)
+plugins=(git vagrant brew fabric rbenv aws gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # Docker
-which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | grep -v "^#" | sed 's/"//g')
+#which docker-machine >/dev/null 2>&1 && $(docker-machine env dev 2> /dev/null | grep -v "^#" | sed 's/"//g')
 
 # pip should only run if there is a virtualenv currently activated
 #export PIP_REQUIRE_VIRTUALENV=true
