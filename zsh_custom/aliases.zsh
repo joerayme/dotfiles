@@ -1,0 +1,1 @@
+alias textcert="openssl x509 -text -noout"
