@@ -7,6 +7,7 @@ BREW_PACKAGES=(
     ctags
     diff-so-fancy
     git
+    gpg
     hugo
     jq
     npm
@@ -95,6 +96,8 @@ do
         fi
     fi
 done
+
+curl --silent https://joeray.me/804EFECC.txt | gpg --import --armor
 
 vim +PluginClean +PluginInstall +qa
 
