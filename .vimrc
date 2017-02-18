@@ -17,6 +17,13 @@ set hlsearch incsearch
 " For new files, make sure there's no EOL at the end of the file
 au BufNewFile * set noeol
 
+" Set mouse integration
+set mouse=a
+set ttymouse=xterm2
+
+" When writing git commits, back them up in case GPG bombs out
+au BufWritePost COMMIT_EDITMSG write! ~/.GIT_COMMITMSG.bak
+
 " Syntax
 au BufNewFile,BufRead *.twig set filetype=html
 au BufNewFile,BufRead Vagrantfile set filetype=ruby
@@ -164,7 +171,7 @@ nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 
 " CtrlP {
     " keymaps
-    let g:ctrlp_map = '<C-i>'
+    " let g:ctrlp_map = '<TAB>'
 
     " Search for files from the current path as well as ancestors in version
     " control
