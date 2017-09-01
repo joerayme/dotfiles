@@ -70,8 +70,8 @@ Plugin 'beyondwords/vim-twig'
 
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+" Plugin 'Shougo/neosnippet'
+" Plugin 'Shougo/neosnippet-snippets'
 Plugin 'honza/vim-snippets'
 
 " Allows aligning by different characters

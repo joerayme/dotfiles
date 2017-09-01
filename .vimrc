@@ -106,22 +106,22 @@ let g:airline_theme = 'powerlineish'
     endif
     let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
-    imap <silent><expr><C-k> neosnippet#expandable() ?
-                \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-                \ "\<C-e>" : "\<Plug>(neosnippet_expand_or_jump)")
-    smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
+    " imap <silent><expr><C-k> neosnippet#expandable() ?
+    "             \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
+    "             \ "\<C-e>" : "\<Plug>(neosnippet_expand_or_jump)")
+    " smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
 
     inoremap <expr><C-g> neocomplcache#undo_completion()
     inoremap <expr><C-l> neocomplcache#complete_common_string()
 
     function! CleverCr()
         if pumvisible()
-            if neosnippet#expandable()
-                let exp = "\<Plug>(neosnippet_expand)"
-                return exp . neocomplcache#close_popup()
-            else
+            " if neosnippet#expandable()
+            "     let exp = "\<Plug>(neosnippet_expand)"
+            "     return exp . neocomplcache#close_popup()
+            " else
                 return neocomplcache#close_popup()
-            endif
+            " endif
         else
             return "\<CR>"
         endif
