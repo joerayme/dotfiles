@@ -94,3 +94,5 @@ if [[ -z $GOPATH ]]; then
 fi
 
 #. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

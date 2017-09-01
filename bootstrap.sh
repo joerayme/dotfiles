@@ -6,6 +6,7 @@ BREW_PACKAGES=(
     boot2docker
     ctags
     diff-so-fancy
+    fzf
     git
     gpg
     hugo

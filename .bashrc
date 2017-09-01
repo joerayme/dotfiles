@@ -147,3 +147,5 @@ function bundle {
 function jira {
     open https://$JIRA/browse/$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
