@@ -19,7 +19,7 @@ dockercl() {
     IMAGES=$(docker ps -aqf status=exited)
     if [[ ! -z $IMAGES ]]; then
         docker ps --all --filter=status=exited
-        for i in $IMAGES
+        printf '%s\n' "$IMAGES" | while IFS= read -r i
         do
             read -q "REPLY?Do you want to delete $i? [yN] "
             echo
