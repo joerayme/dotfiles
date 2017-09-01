@@ -30,6 +30,9 @@ Plugin 'tomtom/tcomment_vim'
 " Mapped to <C-i> in .vimrc
 Plugin 'kien/ctrlp.vim'
 
+" Silver Searcher plugin
+Plugin 'rking/ag.vim'
+
 " Git plugin
 Plugin 'tpope/vim-fugitive'
 
@@ -38,6 +41,7 @@ Plugin 'scrooloose/syntastic'
 
 " Status bar (needs patched font)
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Golang
 Plugin 'fatih/vim-go'
