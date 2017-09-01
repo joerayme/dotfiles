@@ -52,6 +52,9 @@ set nofoldenable
 " Always show a status bar
 set laststatus=2
 
+" Allow backspace to work over autoindent, line breaks and the start of insert
+set backspace=indent,eol,start
+
 " Set airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
