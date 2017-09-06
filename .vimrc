@@ -71,28 +71,27 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_theme = 'powerlineish'
 
-" neocomplcache settings {
+" neocomplete settings {
+    " Disable AutoComplPop
     let g:acp_enableAtStartup = 0
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_camel_case_completion = 1
-    let g:neocomplcache_enable_smart_case = 1
-    let g:neocomplcache_enable_underbar_completion = 1
-    let g:neocomplcache_enable_auto_delimiter = 1
-    let g:neocomplcache_max_list = 15
-    let g:neocomplcache_force_overwrite_completefunc = 1
+    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_smart_case = 1
+    let g:neocomplete#enable_auto_delimiter = 1
+    let g:neocomplete#max_list = 15
+    let g:neocomplete#force_overwrite_completefunc = 1
 
     " Define dictionary.
-    let g:neocomplcache_dictionary_filetype_lists = {
+    let g:neocomplete#sources#dictionary#dictionaries = {
         \ 'default' : '',
         \ 'vimshell' : $HOME.'/.vimshell_hist',
         \ 'scheme' : $HOME.'/.gosh_completions'
         \ }
 
     " Define keyword.
-    if !exists('g:neocomplcache_keyword_patterns')
-        let g:neocomplcache_keyword_patterns = {}
+    if !exists('g:neocomplete#keyword_patterns')
+        let g:neocomplete#keyword_patterns = {}
     endif
-    let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+    let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
     " Allow omnicompletion
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -104,27 +103,17 @@ let g:airline_theme = 'powerlineish'
     autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
     " Enable heavy omni completion.
-    if !exists('g:neocomplcache_omni_patterns')
-      let g:neocomplcache_omni_patterns = {}
+    if !exists('g:neocomplete#sources#omni#input_patterns')
+      let g:neocomplete#sources#omni#input_patterns = {}
     endif
-    let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+    let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
-    " imap <silent><expr><C-k> neosnippet#expandable() ?
-    "             \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-    "             \ "\<C-e>" : "\<Plug>(neosnippet_expand_or_jump)")
-    " smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
-
-    inoremap <expr><C-g> neocomplcache#undo_completion()
-    inoremap <expr><C-l> neocomplcache#complete_common_string()
+    inoremap <expr><C-g> neocomplete#undo_completion()
+    inoremap <expr><C-l> neocomplete#complete_common_string()
 
     function! CleverCr()
         if pumvisible()
-            " if neosnippet#expandable()
-            "     let exp = "\<Plug>(neosnippet_expand)"
-            "     return exp . neocomplcache#close_popup()
-            " else
-                return neocomplcache#close_popup()
-            " endif
+            return neocomplete#close_popup()
         else
             return "\<CR>"
         endif
@@ -135,16 +124,16 @@ let g:airline_theme = 'powerlineish'
 
     " <CR>: close popup
     " <s-CR>: close popup and save indent.
-    inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup()"\<CR>" : "\<CR>"
+    inoremap <expr><s-CR> pumvisible() ? neocomplete#close_popup()"\<CR>" : "\<CR>"
 
     " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-    inoremap <expr><C-y> neocomplcache#close_popup()
+    inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+    inoremap <expr><C-y> neocomplete#close_popup()
 
      " <TAB>: completion.
     inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-" } neocomplcache
+" } neocomplete
 
 " Highlight lines over 100 characters in PHP files
 autocmd FileType php let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)

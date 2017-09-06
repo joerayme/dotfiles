@@ -60,10 +60,9 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-haml'
 
 " Better omnicompletion
-Plugin 'Shougo/neocomplcache.vim'
-" Commented out until I figure out how to use
-" https://github.com/SirVer/ultisnips
-" Plugin 'honza/vim-snippets'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " Allows aligning by different characters. See tabularize in .vimrc
 Plugin 'godlygeek/tabular.git'

@@ -19,7 +19,7 @@ BREW_PACKAGES=(
     terminal-notifier
     the_silver_searcher
     tmux
-    vim
+    vim --with-lua
     wget
     zsh
 )
