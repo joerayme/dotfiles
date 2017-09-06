@@ -14,7 +14,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'guns/vim-clojure-static'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'elzr/vim-json'
 Plugin 'markcornick/vim-terraform'
 
@@ -27,7 +26,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tomtom/tcomment_vim'
 
 " File finder with fuzzy matching
-" Mapped to <C-i> in .vimrc
 Plugin 'kien/ctrlp.vim'
 
 " Silver Searcher plugin
@@ -52,36 +50,26 @@ Plugin 'scrooloose/nerdtree'
 " Displays additions, modifications and deletions for the current file in the gutter
 Plugin 'airblade/vim-gitgutter'
 
-" Writing tools
-Plugin 'reedes/vim-wordy'
-
 " Better python support
-"Plugin 'klen/python-mode'
 Plugin 'python.vim'
-Plugin 'python_match.vim'
-"Plugin 'pythoncomplete'
 
 " HTML
 Plugin 'amirh/HTML-AutoCloseTag'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-haml'
-Plugin 'beyondwords/vim-twig'
 
 " Better omnicompletion
 Plugin 'Shougo/neocomplcache.vim'
-" Plugin 'Shougo/neosnippet'
-" Plugin 'Shougo/neosnippet-snippets'
-Plugin 'honza/vim-snippets'
+" Commented out until I figure out how to use
+" https://github.com/SirVer/ultisnips
+" Plugin 'honza/vim-snippets'
 
-" Allows aligning by different characters
+" Allows aligning by different characters. See tabularize in .vimrc
 Plugin 'godlygeek/tabular.git'
 
 " Expand selection with v, decrease selection with <C-v>
 Plugin 'terryma/vim-expand-region'
-
-" Org mode for note-taking/todo lists
-Plugin 'jceb/vim-orgmode'
 
 call vundle#end()
 
