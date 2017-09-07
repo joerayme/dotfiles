@@ -54,7 +54,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'python.vim'
 
 " HTML
-Plugin 'amirh/HTML-AutoCloseTag'
+Plugin 'alvan/vim-closetag'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-haml'
