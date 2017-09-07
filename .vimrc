@@ -79,6 +79,8 @@ let g:airline_theme = 'powerlineish'
     let g:neocomplete#enable_auto_delimiter = 1
     let g:neocomplete#max_list = 15
     let g:neocomplete#force_overwrite_completefunc = 1
+    " Set minimum syntax keyword length.
+    let g:neocomplete#sources#syntax#min_keyword_length = 3
 
     " Define dictionary.
     let g:neocomplete#sources#dictionary#dictionaries = {
@@ -134,6 +136,14 @@ let g:airline_theme = 'powerlineish'
     inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 " } neocomplete
+
+" ultisnips {
+    let g:UltiSnipsEditSplit="vertical"
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+    let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips', $HOME.'/.vim/plugged/vim-snippets/UltiSnips']
+" } ultisnips
 
 " Highlight lines over 100 characters in PHP files
 autocmd FileType php let w:m1=matchadd('ErrorMsg', '\%>100v.\+', -1)
@@ -236,5 +246,8 @@ nmap <Leader>f :NERDTreeFind<CR>
 " Expand/contract selection from character to word etc.
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" Edit UltiSnips
+nnoremap <leader>sn :UltiSnipsEdit<cr>
 
 nmap <F8> :TagbarToggle<CR>
