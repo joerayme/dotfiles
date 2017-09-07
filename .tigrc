@@ -1,0 +1,1 @@
+bind generic 9 !@bash -c "echo -n '%(commit)' | cut -c 1-8 | tr -d \"\\n\" | pbcopy"
