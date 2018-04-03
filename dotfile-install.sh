@@ -6,7 +6,7 @@ function config {
 }
 mkdir -p .config-backup
 
-if ! config checkout; then
+if config checkout; then
   echo "Checked out config.";
   else
     echo "Backing up pre-existing dot files.";
