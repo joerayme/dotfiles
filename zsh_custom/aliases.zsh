@@ -36,3 +36,5 @@ function gfb() {
 alias t2="tree -L 2"
 
 alias gpa="for dir in \$(find . -name '.git'); do pushd \${dir%/*} && pwd && git co master && git pull; popd; done"
+
+[[ -d ~/.dotfiles ]] && alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
