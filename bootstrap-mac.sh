@@ -68,39 +68,9 @@ brew cask install "${CASK_PACKAGES[@]}"
 brew cleanup && brew cask cleanup
 
 echo "Installing dotfiles..."
-[[ ! -d ~/.dotfiles ]] && git clone git@github.com:joerayme/dotfiles.git ~/.dotfiles >/dev/null 2>&1
-[[ ! -d ~/.oh-my-zsh ]] && git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh >/dev/null 2>&1
+curl --fail --silent --show-error --location https://raw.githubusercontent.com/joerayme/dotfiles/master/dotfile-install.sh | /bin/bash
 
-DIR=$(pwd)
-cd ~/.dotfiles
-git submodule init && git submodule update
-cd "$DIR"
-
-for f in ~/.dotfiles/.*
-do
-    bn=$(basename "$f")
-    target=~/$bn
-    if [[ $bn -ne "." && $bn -ne ".." && $bn -ne ".git" && $bn -ne ".gitmodules" ]]
-    then
-        if [[ ! -L $target && -e $target ]]
-        then
-            read -rp "$target is a regular file, do you want to replace it? " yn
-            case $yn in
-                [Yy]* ) mv "$target" "${target}.bak" && ln -s "$f" "$target";
-            esac
-        elif [[ ! -L $target ]]
-        then
-            read -rp "Do you want to link $bn? " yn
-            case $yn in
-                [Yy]* ) ln -s "$f" "$target";
-            esac
-        fi
-    fi
-done
-
-curl --silent https://joeray.me/804EFECC.txt | gpg --import --armor
-
-vim +PluginClean +PluginInstall +qa
+curl --fail --silent --show-error --location https://joeray.me/804EFECC.txt | gpg --import --armor
 
 echo "Installing pips..."
 pip install "${PIP_PACKAGES[@]}"
