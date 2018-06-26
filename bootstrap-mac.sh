@@ -3,7 +3,6 @@
 set -eo pipefail
 
 BREW_PACKAGES=(
-    boot2docker
     ctags
     diff-so-fancy
     fzf
