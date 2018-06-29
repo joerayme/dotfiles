@@ -36,9 +36,7 @@ au BufNewFile,BufRead **/etc/nginx/**/* set ft=nginx
 autocmd FileType puppet,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Ensure the colours are always reported as 256
-if (&term =~ "-256color")
-    set t_Co=256
-endif
+set t_Co=256
 
 " Lines above/below cursor
 set scrolloff=4
