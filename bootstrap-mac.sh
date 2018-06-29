@@ -42,7 +42,7 @@ curl --fail --silent --show-error --location https://raw.githubusercontent.com/j
 curl --fail --silent --show-error --location https://joeray.me/804EFECC.txt | gpg --import --armor
 
 # Set fast key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Disable "natural" scroll
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
