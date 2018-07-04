@@ -60,7 +60,9 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-haml'
 
 " Better omnicompletion
-Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 

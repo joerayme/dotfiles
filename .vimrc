@@ -71,29 +71,29 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_theme = 'powerlineish'
 
-" neocomplete settings {
+" deoplete settings {
     " Disable AutoComplPop
     let g:acp_enableAtStartup = 0
-    let g:neocomplete#enable_at_startup = 1
-    let g:neocomplete#enable_smart_case = 1
-    let g:neocomplete#enable_auto_delimiter = 1
-    let g:neocomplete#max_list = 15
-    let g:neocomplete#force_overwrite_completefunc = 1
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_smart_case = 1
+    let g:deoplete#enable_auto_delimiter = 1
+    let g:deoplete#max_list = 15
+    let g:deoplete#force_overwrite_completefunc = 1
     " Set minimum syntax keyword length.
-    let g:neocomplete#sources#syntax#min_keyword_length = 3
+    let g:deoplete#sources#syntax#min_keyword_length = 3
 
     " Define dictionary.
-    let g:neocomplete#sources#dictionary#dictionaries = {
+    let g:deoplete#sources#dictionary#dictionaries = {
         \ 'default' : '',
         \ 'vimshell' : $HOME.'/.vimshell_hist',
         \ 'scheme' : $HOME.'/.gosh_completions'
         \ }
 
     " Define keyword.
-    if !exists('g:neocomplete#keyword_patterns')
-        let g:neocomplete#keyword_patterns = {}
+    if !exists('g:deoplete#keyword_patterns')
+        let g:deoplete#keyword_patterns = {}
     endif
-    let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+    let g:deoplete#keyword_patterns['default'] = '\h\w*'
 
     " Allow omnicompletion
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -105,17 +105,17 @@ let g:airline_theme = 'powerlineish'
     autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
     " Enable heavy omni completion.
-    if !exists('g:neocomplete#sources#omni#input_patterns')
-      let g:neocomplete#sources#omni#input_patterns = {}
+    if !exists('g:deoplete#sources#omni#input_patterns')
+      let g:deoplete#sources#omni#input_patterns = {}
     endif
-    let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+    let g:deoplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
-    inoremap <expr><C-g> neocomplete#undo_completion()
-    inoremap <expr><C-l> neocomplete#complete_common_string()
+    inoremap <expr><C-g> deoplete#undo_completion()
+    inoremap <expr><C-l> deoplete#complete_common_string()
 
     function! CleverCr()
         if pumvisible()
-            return neocomplete#close_popup()
+            return deoplete#close_popup()
         else
             return "\<CR>"
         endif
@@ -126,16 +126,16 @@ let g:airline_theme = 'powerlineish'
 
     " <CR>: close popup
     " <s-CR>: close popup and save indent.
-    inoremap <expr><s-CR> pumvisible() ? neocomplete#close_popup()"\<CR>" : "\<CR>"
+    inoremap <expr><s-CR> pumvisible() ? deoplete#close_popup()"\<CR>" : "\<CR>"
 
     " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-    inoremap <expr><C-y> neocomplete#close_popup()
+    inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
+    inoremap <expr><C-y> deoplete#close_popup()
 
      " <TAB>: completion.
     inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-" } neocomplete
+" } deoplete
 
 " ultisnips {
     let g:UltiSnipsEditSplit="vertical"
