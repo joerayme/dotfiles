@@ -3,8 +3,8 @@
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* && -d /usr/local/opt/fzf/bin ]]; then
   export PATH="$PATH:/usr/local/opt/fzf/bin"
 fi
-if [[ ! "$PATH" == *~/.fzf/bin* && -d ~/.fzf/bin ]]; then
-  export PATH="$PATH:~/.fzf/bin"
+if [[ ! "$PATH" == *$HOME/.fzf/bin* && -d $HOME/.fzf/bin ]]; then
+  export PATH="$PATH:$HOME/.fzf/bin"
 fi
 
 # Auto-completion
