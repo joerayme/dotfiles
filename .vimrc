@@ -47,6 +47,9 @@ set expandtab
 
 set nofoldenable
 
+" Disable concealing of double quotes
+let g:vim_json_syntax_conceal = 0
+
 " Always show a status bar
 set laststatus=2
 
