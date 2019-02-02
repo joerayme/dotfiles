@@ -32,6 +32,9 @@ au BufNewFile,BufRead riemann.config set filetype=clojure
 au BufNewFile,BufRead *.tfstate set filetype=json
 au BufNewFile,BufRead **/etc/nginx/**/* set ft=nginx
 
+" Use spelling in markdown files
+autocmd FileType markdown set spell spelllang=en_gb
+
 " Use 2 spaces in puppet and ruby files
 autocmd FileType puppet,ruby set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
