@@ -17,7 +17,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
     prompt_host="%{$reset_color$fg[yellow]%}@$(hostname -s) "
   fi
 
-  PROMPT='${prompt_host}%{$fg[cyan]%}%~$(git_prompt_info) %{$fg[cyan]%}[${(Mw)#jobstates#suspended:}]%(!.%{$fg_bold[red]%}#.%{$fg_bold[green]%}❯)%{$reset_color%} '
+  PROMPT='${prompt_host}%{$fg[cyan]%}%~$(git_prompt_info) %{$fg[cyan]%}[${(Mw)#jobstates#suspended:}]%(!.%{$fg_bold[red]%}❯.%{$fg_bold[green]%}❯)%{$reset_color%} '
 
   ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue]%}git%{$reset_color%}:%{$fg[red]%}"
   ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
