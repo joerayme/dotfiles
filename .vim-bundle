@@ -1,6 +1,6 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 
 let g:vundle_default_git_proto = 'git'
 

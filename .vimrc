@@ -78,13 +78,13 @@ let g:airline_theme = 'powerlineish'
 " deoplete settings {
     " Disable AutoComplPop
     let g:acp_enableAtStartup = 0
-    call deoplete#custom#option('enable_at_startup', 1)
-    call deoplete#custom#option('enable_smart_case', 1)
-    call deoplete#custom#option('enable_auto_delimiter', 1)
+    let g:deoplete#enable_at_startup = 1
+    call deoplete#custom#option('smart_case', 1)
+    " call deoplete#custom#option('enable_auto_delimiter', 1)
     call deoplete#custom#option('max_list', 15)
-    call deoplete#custom#option('force_overwrite_completefunc', 1)
+    " call deoplete#custom#option('force_overwrite_completefunc', 1)
     " Set minimum syntax keyword length.
-    let g:deoplete#sources#syntax#min_keyword_length = 3
+    " let g:deoplete#sources#syntax#min_keyword_length = 3
 
     let g:deoplete#sources#clubhouse#query = 'is:story owner:jray'
     let g:deoplete#sources#clubhouse#apitokenfile = '/Users/jray/.clubhouse'
