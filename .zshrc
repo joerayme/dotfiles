@@ -93,6 +93,8 @@ if [[ -z $GOPATH ]]; then
     path+=($GOPATH/bin/)
 fi
 
+[[ -d ~/.bin/ ]] && path+=(~/.bin/)
+
 #. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
