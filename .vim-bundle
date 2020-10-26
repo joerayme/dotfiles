@@ -7,7 +7,7 @@ let g:vundle_default_git_proto = 'git'
 call vundle#begin()
 
 " let Vundle manage Vundle - required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Syntax plugins
 Plugin 'plasticboy/vim-markdown'
