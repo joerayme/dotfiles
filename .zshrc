@@ -83,6 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+# Set the rg config file
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
 if [[ -d ~/gocode/bin ]]; then
     export GOPATH=~/gocode/
 elif [[ -d ~/Documents/code/go/ ]]; then
