@@ -30,3 +30,5 @@
 	tool = vimdiff
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/code/"]
+    path = ~/code/.gitconfig
