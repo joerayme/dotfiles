@@ -3,20 +3,20 @@
 set -eo pipefail
 
 BREW_PACKAGES=(
-    ctags
     diff-so-fancy
     fzf
     git
+    gnu-sed
     gpg
     hugo
     jq
     npm
     python
     python3
+    ripgrep
     rsync
-    ssh-copy-id
     terminal-notifier
-    the_silver_searcher
+    tig
     tmux
     vim --with-lua
     wget
