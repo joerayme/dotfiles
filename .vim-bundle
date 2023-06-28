@@ -68,7 +68,7 @@ Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'joerayme/deoplete-clubhouse'
+Plugin 'joerayme/deoplete-shortcut'
 
 " Allows aligning by different characters. See tabularize in .vimrc
 Plugin 'godlygeek/tabular.git'

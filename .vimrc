@@ -86,8 +86,8 @@ let g:airline_theme = 'powerlineish'
     " Set minimum syntax keyword length.
     " let g:deoplete#sources#syntax#min_keyword_length = 3
 
-    let g:deoplete#sources#clubhouse#query = 'is:story owner:jray'
-    let g:deoplete#sources#clubhouse#apitokenfile = '/Users/jray/.clubhouse'
+    let g:deoplete#sources#shortcut#query = 'is:story owner:jray'
+    let g:deoplete#sources#shortcut#apitokenfile = '/Users/jray/.clubhouse'
 
     " Define dictionary.
     let g:deoplete#sources#dictionary#dictionaries = {
