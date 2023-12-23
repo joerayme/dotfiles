@@ -75,71 +75,7 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_theme = 'powerlineish'
 
-" deoplete settings {
-    " Disable AutoComplPop
-    let g:acp_enableAtStartup = 0
-    let g:deoplete#enable_at_startup = 1
-    call deoplete#custom#option('smart_case', 1)
-    " call deoplete#custom#option('enable_auto_delimiter', 1)
-    call deoplete#custom#option('max_list', 15)
-    " call deoplete#custom#option('force_overwrite_completefunc', 1)
-    " Set minimum syntax keyword length.
-    " let g:deoplete#sources#syntax#min_keyword_length = 3
 
-    let g:deoplete#sources#shortcut#query = 'is:story owner:jray'
-    let g:deoplete#sources#shortcut#apitokenfile = '/Users/jray/.clubhouse'
-
-    " Define dictionary.
-    let g:deoplete#sources#dictionary#dictionaries = {
-        \ 'default' : '',
-        \ 'vimshell' : $HOME.'/.vimshell_hist',
-        \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
-
-    " Define keyword.
-    call deoplete#custom#option('keyword_patterns', {'default': '\h\w*'})
-
-    " Allow omnicompletion
-    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html,markdown,mkd setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
-    " Enable heavy omni completion.
-    if !exists('g:deoplete#sources#omni#input_patterns')
-      let g:deoplete#sources#omni#input_patterns = {}
-    endif
-    let g:deoplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-
-    inoremap <expr><C-g> deoplete#undo_completion()
-    inoremap <expr><C-l> deoplete#complete_common_string()
-
-    function! CleverCr()
-        if pumvisible()
-            return deoplete#close_popup()
-        else
-            return "\<CR>"
-        endif
-    endfunction
-
-    " <CR> close popup and save indent or expand snippet
-    imap <expr> <CR> CleverCr()
-
-    " <CR>: close popup
-    " <s-CR>: close popup and save indent.
-    inoremap <expr><s-CR> pumvisible() ? deoplete#close_popup()"\<CR>" : "\<CR>"
-
-    " <C-h>, <BS>: close popup and delete backword char.
-    inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"
-    inoremap <expr><C-y> deoplete#close_popup()
-
-     " <TAB>: completion.
-    inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-" } deoplete
 
 " ultisnips {
     let g:UltiSnipsEditSplit="vertical"

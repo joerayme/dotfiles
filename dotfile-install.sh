@@ -14,8 +14,9 @@ if config checkout; then
 fi;
 config checkout
 config config status.showUntrackedFiles no
-config submodule init && config submodule update
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 [[ ! -d $HOME/.oh-my-zsh ]] && git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh >/dev/null 2>&1
 
-vim +PluginClean +PluginInstall +qa
+vim +PlugClean +PlugInstall +qa

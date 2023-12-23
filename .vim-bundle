@@ -1,81 +1,55 @@
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
-let g:vundle_default_git_proto = 'git'
-
-call vundle#begin()
-
-" let Vundle manage Vundle - required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 " Syntax plugins
-Plugin 'plasticboy/vim-markdown'
-Plugin 'evidex/vim-puppet'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'guns/vim-clojure-static'
-Plugin 'elzr/vim-json'
-Plugin 'markcornick/vim-terraform'
+Plug 'plasticboy/vim-markdown'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'guns/vim-clojure-static'
+Plug 'elzr/vim-json'
+Plug 'hashivim/vim-terraform'
+Plug 'fatih/vim-go'
 
 " Plugin to display a list of tags for the current file
 " Mapped to F8 in .vimrc
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " Toggles comments in files using <c-_><c-_> (inline) or <c-_>b (block)
 " See https://github.com/tomtom/tcomment_vim#readme for more keys
-Plugin 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim'
 
 " File finder with fuzzy matching
-Plugin 'kien/ctrlp.vim'
-
-" Silver Searcher plugin
-Plugin 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
 
 " Git plugin
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Syntax checker for multiple languages
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Status bar (needs patched font)
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" Golang
-Plugin 'fatih/vim-go'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Directory browser
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Displays additions, modifications and deletions for the current file in the gutter
-Plugin 'airblade/vim-gitgutter'
-
-" Better python support
-Plugin 'python.vim'
+Plug 'airblade/vim-gitgutter'
 
 " HTML
-Plugin 'alvan/vim-closetag'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'tpope/vim-haml'
+Plug 'alvan/vim-closetag'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'tpope/vim-haml'
 
 " Better omnicompletion
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'joerayme/deoplete-shortcut'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Allows aligning by different characters. See tabularize in .vimrc
-Plugin 'godlygeek/tabular.git'
+Plug 'godlygeek/tabular.git'
 
 " Expand selection with v, decrease selection with <C-v>
-Plugin 'terryma/vim-expand-region'
+Plug 'terryma/vim-expand-region'
 
-call vundle#end()
-
-filetype plugin indent on
+call plug#end()
