@@ -16,6 +16,7 @@
     excludesfile = ~/.gitignore_global
 [push]
     default = simple
+    autoSetupRemote = true
 [diff]
     submodule = log
 	tool = vimdiff
