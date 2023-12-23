@@ -73,6 +73,8 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vagrant fabric rbenv aws gpg-agent zsh_reload kubectl)
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source $ZSH/oh-my-zsh.sh
 
 # Docker
@@ -92,9 +94,11 @@ elif [[ -d ~/Documents/code/go/ ]]; then
     export GOPATH=~/Documents/code/go/
 fi
 
-if [[ -z $GOPATH ]]; then
+if [[ -d $GOPATH/bin/ ]]; then
     path+=($GOPATH/bin/)
 fi
+
+[[ -d /usr/local/go/bin ]] && path+=(/usr/local/go/bin)
 
 [[ -d ~/.bin/ ]] && path+=(~/.bin/)
 
@@ -102,18 +106,26 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+[ -f ${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
 
-_direnv_hook() {
-  trap -- '' SIGINT;
-  eval "$("/usr/local/bin/direnv" export zsh)";
-  trap - SIGINT;
-}
-typeset -ag precmd_functions;
-if [[ -z "${precmd_functions[(r)_direnv_hook]+1}" ]]; then
-  precmd_functions=( _direnv_hook ${precmd_functions[@]} )
+if [[ -f $HOMEBREW_PREFIX/bin/direnv ]]; then
+    _direnv_hook() {
+      trap -- '' SIGINT;
+      eval "$("${HOMEBREW_PREFIX}/bin/direnv" export zsh)";
+      trap - SIGINT;
+    }
+    typeset -ag precmd_functions;
+    if [[ -z "${precmd_functions[(r)_direnv_hook]+1}" ]]; then
+      precmd_functions=( _direnv_hook ${precmd_functions[@]} )
+    fi
+    typeset -ag chpwd_functions;
+    if [[ -z "${chpwd_functions[(r)_direnv_hook]+1}" ]]; then
+      chpwd_functions=( _direnv_hook ${chpwd_functions[@]} )
+    fi
 fi
-typeset -ag chpwd_functions;
-if [[ -z "${chpwd_functions[(r)_direnv_hook]+1}" ]]; then
-  chpwd_functions=( _direnv_hook ${chpwd_functions[@]} )
+
+if [[ -d $HOMEBREW_PREFIX/opt/nvm ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "${HOMEBREW_PREFIX}/opt/nvm/nvm.sh" ] && \. "${HOMEBREW_PREFIX}/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "${HOMEBREW_PREFIX}/opt/nvm/etc/bash_completion.d/nvm" ] && \. "${HOMEBREW_PREFIX}/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
