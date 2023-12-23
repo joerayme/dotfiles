@@ -46,6 +46,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" coc extensions
+Plug 'neoclide/coc-json', {'do': 'npx yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'npx yarn install --frozen-lockfile'}
+Plug 'josa42/coc-docker.git', {'do': 'npm ci'}
+Plug 'fannheyward/coc-pyright.git', {'do': 'npm ci'}
+
 " Allows aligning by different characters. See tabularize in .vimrc
 Plug 'godlygeek/tabular.git'
 
