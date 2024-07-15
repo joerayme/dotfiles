@@ -155,6 +155,7 @@ endif
 
 set background=dark
 if &t_Co >= 256 || has("gui_running")
+   let g:solarized_termcolors=256
    colorscheme solarized
 endif
 
