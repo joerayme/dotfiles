@@ -18,7 +18,7 @@ BREW_PACKAGES=(
     terminal-notifier
     tig
     tmux
-    vim --with-lua
+    vim
     wget
     zsh
 )
