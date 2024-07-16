@@ -33,3 +33,6 @@
 	defaultBranch = main
 [includeIf "gitdir:~/code/"]
     path = ~/code/.gitconfig
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+

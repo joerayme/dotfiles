@@ -53,7 +53,7 @@ Plug 'josa42/coc-docker.git', {'do': 'npm ci'}
 Plug 'fannheyward/coc-pyright.git', {'do': 'npm ci'}
 
 " Allows aligning by different characters. See tabularize in .vimrc
-Plug 'godlygeek/tabular.git'
+Plug 'godlygeek/tabular'
 
 " Expand selection with v, decrease selection with <C-v>
 Plug 'terryma/vim-expand-region'
