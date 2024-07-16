@@ -94,7 +94,7 @@ let g:airline_theme = 'powerlineish'
     " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
     " other plugin before putting this into your config
     inoremap <silent><expr> <TAB>
-          \ coc#pum#visible() ? coc#pum#next(1) :
+          \ coc#pum#visible() ? coc#pum#confirm() :
           \ CheckBackspace() ? "\<Tab>" :
           \ coc#refresh()
     inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
@@ -139,9 +139,9 @@ let g:airline_theme = 'powerlineish'
 
 " ultisnips {
     let g:UltiSnipsEditSplit="vertical"
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+    let g:UltiSnipsExpandTrigger="<c-s>"
+    let g:UltiSnipsJumpForwardTrigger="<c-j>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
     let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips', $HOME.'/.vim/plugged/vim-snippets/UltiSnips']
 " } ultisnips
 
