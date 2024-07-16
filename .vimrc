@@ -135,6 +135,8 @@ let g:airline_theme = 'powerlineish'
 
     " Symbol renaming
     nmap <leader>rn <Plug>(coc-rename)
+
+    let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-git', 'coc-docker', 'coc-pyright']
 " } coc
 
 " ultisnips {
