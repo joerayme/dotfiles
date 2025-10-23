@@ -71,7 +71,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vagrant fabric rbenv aws gpg-agent zsh_reload kubectl)
+plugins=(git vagrant fabric rbenv aws gpg-agent kubectl)
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -101,6 +101,7 @@ fi
 [[ -d /usr/local/go/bin ]] && path+=(/usr/local/go/bin)
 
 [[ -d ~/.bin/ ]] && path+=(~/.bin/)
+[[ -d ~/.local/bin ]] && path+=(~/.local/bin/)
 
 #. ~/.vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
 
@@ -129,3 +130,6 @@ if [[ -d $HOMEBREW_PREFIX/opt/nvm ]]; then
   [ -s "${HOMEBREW_PREFIX}/opt/nvm/nvm.sh" ] && \. "${HOMEBREW_PREFIX}/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "${HOMEBREW_PREFIX}/opt/nvm/etc/bash_completion.d/nvm" ] && \. "${HOMEBREW_PREFIX}/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
+
+export EDITOR=vim
+export LESS="--no-init --quit-if-one-screen -R"
