@@ -1,1 +1,2 @@
 theme = Builtin Solarized Dark
+copy-on-select = clipboard
