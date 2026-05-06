@@ -15,6 +15,7 @@
 - NEVER ignore the output of the system or the tests - Logs and messages often contain CRITICAL information.
 - TEST OUTPUT MUST BE PRISTINE TO PASS
 - NO EXCEPTIONS POLICY: Under no circumstances should you mark any test type as "not applicable". Every project, regardless of size or complexity, MUST have unit tests, integration tests, AND end-to-end tests. If you believe a test type doesn't apply, you need the human to say exactly "I AUTHORIZE YOU TO SKIP WRITING TESTS THIS TIME"
+- When testing properties are accepted/returned, prefer fewer tests which test all properties (e.g. one for default values, one for overrides) rather than a test per property
 
 ## We practice TDD. That means:
 
@@ -34,7 +35,7 @@ The above is NOT NEGOTIABLE. You MUST follow TDD.
 - Refactor code to improve design while keeping tests green
 - Repeat the cycle for each new feature or bugfix
 
-If the test is for a new method, implement a stub of the method along with the tests before you check for a failing test.
+If the test is for a new method or class, **ALWAYS** implement a stub of the method at the same time as the tests BEFORE you check for a failing test.
 
 ### Critical TDD Requirements
 
@@ -66,4 +67,4 @@ When using `git diff`, be sure to explicitly specify you want to use `diff` as t
 
 ## Python
 
-When writing one-off scripts, prefer using uv with inline dependencies and run the scripts with `uv run`
+When writing one-off scripts using Python, prefer using uv with inline dependencies and run the scripts with `uv run`
